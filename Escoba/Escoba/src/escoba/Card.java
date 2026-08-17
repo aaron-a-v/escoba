@@ -24,6 +24,14 @@ public class Card {
     public String getStick(){
         return stick;
     }
+
+    // Valor de la carta para sumar 15 en la Escoba
+    public int getValue() {
+        if (num == 10) return 8;  // Sota
+        if (num == 11) return 9;  // Caballo
+        if (num == 12) return 10; // Rey
+        return num;               // Del 1 al 7 suman su propio valor
+    }
     
     public String toString(){
         String nameCard = String.valueOf(num);

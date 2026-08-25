@@ -20,18 +20,24 @@ public abstract class Player {
 
     public String getName() { return name; }
     public ArrayList<Card> getHand(){ return hand;}
+    public ArrayList<Card> getCapturedCards() { return capturedCards; }
     public void receiveCard(Card cardr){ hand.add(cardr); } // Añadimos cartas a nuestra mano
 
+    public void captureCards(ArrayList<Card> cards) {
+        capturedCards.addAll(cards);
+    }
     
     public int getEscobas(){
         return escobas;
     }
+
+    public void addEscoba() { this.escobas++; }
     
     public int getPoints(){
         return points;
     }
     
-    public void addPoints(){}
+    public void addPoints(int pts) { this.points += pts; }
     
     //toString
     
